@@ -12,10 +12,10 @@ import Protectedroute from './Protectedroute'
 
 import { Route, Routes,Navigate } from 'react-router-dom'    
 
-//admin side
-// import AddProducts from '../admin/AddProducts'
-// import Allproducts from '../admin/Allproducts'
-// import Dashboard from '../admin/Dashboard'
+// admin side
+import AddProducts from '../admin/AddProducts'
+import Allproducts from '../admin/Allproducts'
+import Dashboard from '../admin/Dashboard'
 
 
 
@@ -30,12 +30,14 @@ const Routers=()=> {
     <Route path='shop/:id' element={<ProductDetails/>} />
     <Route path='cart' element={<Cart/>} />
 
-        <Route path='checkout' element={
-           <Protectedroute>
-                <Checkout/>
-           </Protectedroute>
-        }
-        />
+    <Route path="/*" element={<Protectedroute/>}>
+        <Route path='checkout' element={<Checkout/>} />
+        <Route path='dashboard' element={<Dashboard/>} />
+        <Route path='dashboard/all-products' element={<Allproducts/>} />
+        <Route path='dashboard/add-Products' element={<AddProducts/>} />
+    </Route>
+
+  
 
     <Route path='login' element={<Login/>} />
     <Route path='signup' element={<Signup/>} />

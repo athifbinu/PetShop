@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
+//common style
+import "./Style/common.scss"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 
