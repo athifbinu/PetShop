@@ -79,7 +79,7 @@ const products =[
 
   {
     id: "01",
-    productName: "N & D Dog Food",
+    productName: "Meo Adualt Tuna",
     imgUrl: productImg01,
     category: "brand",
     price: 253,
@@ -267,10 +267,10 @@ const products =[
 
   {
     id: "09",
-    productName: "N & D Dog Food",
+    productName: "pedigree puppy",
     imgUrl: productImg09,
     category: "Dog",
-    price: 253,
+    price: 280,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
