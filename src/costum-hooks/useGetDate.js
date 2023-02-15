@@ -13,7 +13,7 @@ const useGetDate = collectionName => {
     useEffect(()=>{
         const getData =async()=>{
 
-            // firebase firestore reatime date updated
+            // firebase firestore reatime date updated 
                await onSnapshot(collectionRef,(snapshot)=>{
                 setData(snapshot.docs.map(doc=>({...doc.data(),id:doc.id})))
 

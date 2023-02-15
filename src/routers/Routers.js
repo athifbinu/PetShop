@@ -16,6 +16,7 @@ import { Route, Routes,Navigate } from 'react-router-dom'
 import AddProducts from '../admin/AddProducts'
 import Allproducts from '../admin/Allproducts'
 import Dashboard from '../admin/Dashboard'
+import Users from '../admin/Users'
 
 
 
@@ -35,6 +36,7 @@ const Routers=()=> {
         <Route path='dashboard' element={<Dashboard/>} />
         <Route path='dashboard/all-products' element={<Allproducts/>} />
         <Route path='dashboard/add-Products' element={<AddProducts/>} />
+        <Route path='dashboard/users' element={<Users/>} />
     </Route>
 
   
