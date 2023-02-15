@@ -1,0 +1,41 @@
+
+.revenue__box,
+.order__box,
+.products__box,
+.user__box{
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.revenue__box{
+    background: var(--card-bg-01);
+}
+
+.products__box{
+   background: var(--card-bg-03);
+}
+
+.order__box{
+    background: var(--card-bg-04);
+}
+.user__box{
+    background: var(--card-bg-04);
+}
+
+.revenue__box h5,
+.order__box h5,
+.products__box h5,
+.user__box h5{
+     font-size: 1.1rem;
+     font-weight: 500;
+     color: var(--primary-color);
+     margin-bottom: 20px;
+}
+.revenue__box  span,
+.order__box span,
+.products__box span,
+.user__box span{
+   color: var(--primary-color);
+   font-weight: 600;
+   font-size: 2rem;
+}

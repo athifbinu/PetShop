@@ -114,22 +114,24 @@ const AddProducts = () => {
                 <FormGroup className='form__group w-50'>
                     <span>Price</span>
                         <br />
-                    <input type="number"  placeholder='520'
+                    <input type="number"  placeholder='Enter Price'
                      value={enterPrice}
                       onChange={e=>setEnterPrice(e.target.value)}
                       required />
                 </FormGroup>
 
+
                 <FormGroup className='form__group w-50 '>
                     <span>Category</span>
                     <br />
-                    <select className='w-100 p-2' value={enterCategory} 
-                    onRateChange={e=>setEntnterCategory(e.target.value)} >
-                        <option value="dog Food">Dog Food</option>
-                        <option value="Cat Food">Cat Food</option>
-                        <option value="Toys ">Toys</option>
-                        <option value="feed Bowls">Feed Bowls</option>
-                        <option value="Medicines">Medicines</option>
+                    <select className='w-100 p-2'
+                     value={enterCategory} 
+                     onChange={e=>setEntnterCategory(e.target.value)} >
+                        <option value="Dog">Dog Food</option>
+                        <option value="Cat">Cat Food</option>
+                        <option value="Toy ">Toys</option>
+                        <option value="Bowl">Feed Bowls</option>
+                        <option value="med">Medicines</option>
                     </select>
                 </FormGroup>
                 </div> 

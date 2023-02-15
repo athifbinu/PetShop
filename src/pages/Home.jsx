@@ -14,7 +14,13 @@ import ProductList from '../components/UI/ProductList'
 import counterimg from '../assets/images/counter-timer-img.png'
 import Clock from "../components/UI/Clock"
 
+import useGetDate from '../costum-hooks/useGetDate'
+
+
 const Home = () => {
+
+    const {data:products,loading} =useGetDate('products')
+    console.log(products)
 
     const [TopbrandsProducts,setTopBrands]=useState([])
     const [DogFoods,setDogFoods]=useState([])
@@ -73,7 +79,9 @@ const Home = () => {
 
 
 
-    },[]);
+    },[products]);
+
+    
 
   
 
@@ -114,7 +122,11 @@ const Home = () => {
                        <Col lg='12' className='text-center'>
                         <h2 className='section__title'>Top Brands</h2>
                        </Col>
-                       <ProductList data={TopbrandsProducts}/>
+                       {
+                        loading ? <h5 className='fw-bold'>Loading...</h5> :
+                        <ProductList data={TopbrandsProducts}/>
+                       }
+             
                     
 
                   </Row>
@@ -128,7 +140,10 @@ const Home = () => {
                     <Col lg='12' className='text-center'>
                      <h2 className='section__title'>Dog Foods</h2>
                       </Col>
-                      <ProductList data={DogFoods}/>   
+                        {
+                          loading ? <h5 className='fw-bold'>Loading</h5> :
+                          <ProductList data={DogFoods}/>   
+                        }
                   </Row>
               </Container>
             </section>
@@ -142,7 +157,10 @@ const Home = () => {
                     <Col lg='12' className='text-center'>
                      <h2 className='section__title'>Cat Foods</h2>
                       </Col>
-                      <ProductList data={catFoods}/>   
+                        {
+                          loading ? <h5 className='fw-bold'>Loading</h5> :
+                          <ProductList data={catFoods}/>
+                        }   
                   </Row>
               </Container>
             </section>
@@ -176,8 +194,10 @@ const Home = () => {
                           <Col lg='12' className='text-center mb-5'>
                               <h2 className="section__title">Toys</h2>
                           </Col>
-
-                         <ProductList data={Toys}/>
+                          {
+                            loading ? <h5 className='fw-bold'>Loading</h5> :
+                             <ProductList data={Toys}/>
+                          }
 
                       </Row>
                    </Container>
@@ -193,7 +213,10 @@ const Home = () => {
                               <h2 className="section__title">Feed Bowls</h2>
                           </Col>
 
-                         <ProductList data={Bowl}/>
+                          {
+                            loading ? <h5 className='fw-bold'>Loading</h5>:
+                            <ProductList data={Bowl}/>
+                          }
 
 
                       </Row>
@@ -207,8 +230,12 @@ const Home = () => {
                           <Col lg='12' className='text-center mb-5'>
                               <h2 className="section__title">Medicines</h2>
                           </Col>
+                          {
+                            loading ? <h5 className='fw-bold'>Loading</h5> :
 
-                         <ProductList data={medicines} />
+
+                           <ProductList data={medicines} />
+                          }
 
                          <ProductList />
 
