@@ -51,7 +51,7 @@ const AddProducts = () => {
                 description:enterDescription,
                 category:enterCategory,
                 price:enterPrice,
-                imgUrL:downloadURL
+                imgUrl:downloadURL
                 
               })
             })
@@ -127,9 +127,11 @@ const AddProducts = () => {
                     <select className='w-100 p-2'
                      value={enterCategory} 
                      onChange={e=>setEntnterCategory(e.target.value)} >
+                        <option >Select Category</option>
+                        <option value="brand">Top Brands</option>
                         <option value="Dog">Dog Food</option>
                         <option value="Cat">Cat Food</option>
-                        <option value="Toy ">Toys</option>
+                        <option value="Toys">Toys</option>
                         <option value="Bowl">Feed Bowls</option>
                         <option value="med">Medicines</option>
                     </select>

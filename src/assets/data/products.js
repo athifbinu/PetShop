@@ -830,7 +830,7 @@ const products =[
     id: "32",
     productName: "N & D Dog Food",
     imgUrl: productImg32,
-    category: "Toy",
+    category: "Toys",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -854,7 +854,7 @@ const products =[
     id: "33",
     productName: "N & D Dog Food",
     imgUrl: productImg33,
-    category: "Toy",
+    category: "Toys",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -878,7 +878,7 @@ const products =[
     id: "34",
     productName: "N & D Dog Food",
     imgUrl: productImg34,
-    category: "Toy",
+    category: "Toys",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -902,7 +902,7 @@ const products =[
     id: "35",
     productName: "N & D Dog Food",
     imgUrl: productImg35,
-    category: "Toy",
+    category: "Toys",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",

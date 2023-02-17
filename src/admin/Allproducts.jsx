@@ -19,7 +19,7 @@ const Allproducts = () => {
     toast.success("Product Deleted")
   }
 
-  // console.log(productData)
+  console.log(productData)
 
   return (
     <section>
@@ -44,7 +44,7 @@ const Allproducts = () => {
                       :  
                         productData.map(item=>(
                           <tr key={item.id}>
-                      <td> <img src={item.imgUrL} alt="" /></td>
+                      <td> <img src={item.imgUrl} alt="" /></td>
                       <td>{item.title}</td>
                       <td>{item.category}</td>
                       <td>{item.price}</td>

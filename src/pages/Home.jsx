@@ -47,7 +47,7 @@ const Home = () => {
 
 
           const filteredtoys =products.filter(
-            (item)=>item.category === "Toy" )
+            (item)=>item.category === "Toys" )
 
             const filteredFeedBowl =products.filter(
               (item)=>item.category === "Bowl" )

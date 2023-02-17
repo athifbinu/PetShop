@@ -8,7 +8,7 @@ import userGetDate from '../costum-hooks/useGetDate'
 const Dashboard = () => {
 
   const {data:products}= userGetDate('products')
-  const {data:users}= userGetDate('products')
+  const {data:users}= userGetDate('user')
 
 
   return (
