@@ -828,17 +828,17 @@ const products =[
 
   {
     id: "32",
-    productName: "N & D Dog Food",
+    productName: "Toy One",
     imgUrl: productImg32,
     category: "Toys",
-    price: 253,
+    price: 125,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum sdbfsbhfsbs  sjbsdjfsdjbsjd vsjv sj accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
     reviews: [
       {
-        rating: 4.8,
+        rating: 4.4,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
@@ -846,23 +846,23 @@ const products =[
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.7,
+    avgRating: 4.5,
   },
 
 
   {
     id: "33",
-    productName: "N & D Dog Food",
+    productName: "Toy two",
     imgUrl: productImg33,
     category: "Toys",
-    price: 253,
+    price: 2,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
     reviews: [
       {
-        rating: 4.8,
+        rating: 4.1,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {

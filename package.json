@@ -25,6 +25,7 @@
     "redux": "^4.2.1",
     "remixicon": "^2.5.0",
     "sass": "^1.57.1",
+    "sweetalert2": "^11.4.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

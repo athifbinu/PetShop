@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container,Row,Col,FormGroup,Form } from 'reactstrap'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/CommonSection'
@@ -6,12 +6,72 @@ import CommonSection from '../components/UI/CommonSection'
 
 import '../Style/Checkout.css'
 import { useSelector } from 'react-redux'
+import {db,storage} from "../FireBase/Firebase.config"
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
+import {toast} from "react-toastify"
 
-
-const Checkout = () => {
+const Checkout = () => { 
 
   const totalQty =useSelector(state=>state.cart.totalQuantity )
   const totalAmount =useSelector(state=>state.cart.totalAmount)
+   
+  const navigate =useNavigate();
+   
+  
+   const [enterName,setEnterName]=useState('')
+   const [enterEmail,setEnterEmail]=useState('')
+   const [enterPone,setEnterPone]=useState('')
+   const [enterAdress,setEnterAdress]=useState('')
+   const [enterCity,setEnterCity]=useState('')
+   const [enterPostal,setEnterPostal]=useState('')
+   const [enterCountry,setEnterCountry]=useState('')
+  //  const [loading,setLoading]=useState(false)
+
+   const handleSubmit =(e)=>{
+       e.preventDefault();
+      
+
+       db.collection("orders").a({
+        name:enterName,
+        email:enterEmail,
+        pone:enterPone,
+        adress:enterAdress,
+        city:enterCity,
+        postal:enterPostal,
+        country:enterCountry,
+       })
+        .then(()=>{
+
+            Swal.fire(
+              'Order Plased',
+              'You clicked the button!',
+              'success'
+            )
+            navigate('/shop')
+
+        })
+        .catch (err =>{
+          toast.error(err.message)
+        })
+        
+        
+   
+
+       
+
+   }
+
+ const test=()=>{
+  Swal.fire(
+    'Order Plased',
+    'You clicked the button!',
+    'success'
+  )
+ }
+   
+
+
 
 
   return (
@@ -22,44 +82,53 @@ const Checkout = () => {
           <Row>
             <Col lg='8'>
               <h6 className='mb-4 fw-bold '>Billing Information</h6>
-               <Form className='billing__form'>
+               <Form className='billing__form mt-5' onSubmit={handleSubmit} >
                 
-                    <FormGroup className='form__group'>
-                        <input type="text" placeholder='Enter Your Name' />
+                    <FormGroup className='form__group '>
+                        <input className='wl fw-bold' value={enterName} onChange={e=>setEnterName(e.target.value)} required 
+                         type="text" placeholder='Enter Your Name' />
                     </FormGroup>
 
                     <FormGroup className='form__group'>
-                        <input type="email" placeholder='Enter Your Email' />
+                        <input className='wl fw-bold' type="email" placeholder='Enter Your Email'
+                         value={enterEmail} onChange={e=>setEnterEmail(e.target.value)} required />
                     </FormGroup>
 
                     <FormGroup className='form__group'>
-                        <input type="number" placeholder='Phone Number' />
+                        <input className='wl fw-bold' type="number" placeholder='Phone Number'
+                        value={enterPone} onChange={e=>setEnterPone(e.target.value)} required />
                     </FormGroup>
 
                     <FormGroup className='form__group'>
-                        <input type="text" placeholder='Street Adress' />
+                        <input className='wl fw-bold' type="text" placeholder='Street Adress'
+                         value={enterAdress} onChange={e=>setEnterAdress(e.target.value)} required />
                     </FormGroup>
 
                     <FormGroup className='form__group'>
-                        <input type="text" placeholder='Enter Your City' />
+                        <input className='wl fw-bold' type="text" placeholder='Enter Your City'
+                        value={enterCity} onChange={e=>setEnterCity(e.target.value)} required />
                     </FormGroup>
 
 
                     <FormGroup className='form__group'>
-                        <input type="text" placeholder='Postal code' />
+                        <input className='wl fw-bold' type="text" placeholder='Postal code'
+                        value={enterPostal}  onChange={e=>setEnterPostal(e.target.value)} required />
                     </FormGroup>
 
                     <FormGroup className='form__group'>
-                        <input type="text" placeholder='Country' />
+                        <input className='wl fw-bold' type="text" placeholder='Country'
+                        value={enterCountry} onChange={e=>setEnterCountry(e.target.value)} required />
                     </FormGroup>
+
+
 
 
               
                  </Form>
             </Col>
-              
 
-                 <Col lg='4'>
+
+            <Col lg='4'>
                      <div className="checkout__cart">
                           <h6>Total qty: <span>{totalQty} items</span></h6>
                           <h6>SubTotel: <span>{totalAmount}</span></h6>
@@ -67,11 +136,14 @@ const Checkout = () => {
                           <h4>
                             Total Cost: <span>{totalAmount}</span>
                           </h4>
-                          <button className='buy__btn text-black bg-white w-100 '>Place Order</button>
- 
+
+                          <button onClick={test}    className='buy__btn text-black bg-white w-100 '>Place Order</button>
                     
                      </div>
-                 </Col>
+             </Col>
+              
+
+       
         
              </Row>
           </Container>
@@ -79,5 +151,6 @@ const Checkout = () => {
     </Helmet>
   )
 }
+
 
 export default Checkout

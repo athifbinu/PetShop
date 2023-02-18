@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom'
 
 const AddProducts = () => {
 
+  
 
   const [enterTitle,setEnterTitle] =useState('')
   const [enterShortDesc,setEnterShortSesc] =useState('')
@@ -46,7 +47,7 @@ const AddProducts = () => {
          }, ()=>{
             getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL)=>{
               await addDoc(docRef, {
-                title:enterTitle,
+                productName:enterTitle,
                 shortDesc:enterShortDesc,
                 description:enterDescription,
                 category:enterCategory,
