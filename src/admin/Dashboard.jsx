@@ -9,6 +9,7 @@ const Dashboard = () => {
 
   const {data:products}= userGetDate('products')
   const {data:users}= userGetDate('user')
+  const {data:orders}=userGetDate('orders')
 
 
   return (
@@ -25,7 +26,7 @@ const Dashboard = () => {
             <Col className='lg-3'>
             <div className="order__box">
                   <h5>Orders</h5>
-                  <span>4</span>
+                  <span>{orders.length}</span>
                 </div>
             </Col>
             <Col className='lg-3'>

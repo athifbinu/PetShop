@@ -26,13 +26,15 @@ const ProductDetails = () => {
   const docRef =doc(db,'products',id)
     
   const {data:products}=useGetDate('products')
+  
+
 
   // const product =products.find(item=>item.id === id)
   // avgRating,reviews,
   const {imgUrl,productName,price,description,shortDesc,category} = products
   
 
-   console.log(products)
+   console.log("products"+ products)
   const [Products,setProduct] =useState({})
 
   const [tab,setTab] =useState('desc')

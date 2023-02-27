@@ -10,6 +10,7 @@ import {db,storage} from "../FireBase/Firebase.config"
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import {toast} from "react-toastify"
+import {addDoc,collection} from 'firebase/firestore'
 
 const Checkout = () => { 
 
@@ -28,52 +29,40 @@ const Checkout = () => {
    const [enterCountry,setEnterCountry]=useState('')
   //  const [loading,setLoading]=useState(false)
 
+  const userCollectionref =collection(db,'orders')
+
+
    const handleSubmit =(e)=>{
        e.preventDefault();
       
-
-       db.collection("orders").a({
-        name:enterName,
-        email:enterEmail,
-        pone:enterPone,
-        adress:enterAdress,
-        city:enterCity,
-        postal:enterPostal,
-        country:enterCountry,
-       })
-        .then(()=>{
-
-            Swal.fire(
-              'Order Plased',
-              'You clicked the button!',
-              'success'
-            )
-            navigate('/shop')
-
-        })
-        .catch (err =>{
-          toast.error(err.message)
-        })
-        
-        
-   
+     addDoc(userCollectionref,{
+      name:enterName,
+      email:enterEmail,
+      pone:enterPone,
+      adress:enterAdress,
+      city:enterCity,
+      postal:enterPostal,
+      country:enterCountry,
 
        
-
+ 
+     }).then(()=>{
+    
+      Swal.fire(
+        'Order Plased Succesfully',
+        'You clicked the button!',
+        'success'
+      )
+     })
+     .catch((err)=>{
+      console.log("form not submih",err)
+     })
+       
    }
 
- const test=()=>{
-  Swal.fire(
-    'Order Plased',
-    'You clicked the button!',
-    'success'
-  )
- }
-   
 
 
-
-
+  
   return (
     <Helmet>
         <CommonSection title="Checkout"/>
@@ -121,14 +110,14 @@ const Checkout = () => {
                     </FormGroup>
 
 
-
+                    
 
               
                  </Form>
             </Col>
 
 
-            <Col lg='4'>
+             <Col lg='4'>
                      <div className="checkout__cart">
                           <h6>Total qty: <span>{totalQty} items</span></h6>
                           <h6>SubTotel: <span>{totalAmount}</span></h6>
@@ -137,10 +126,10 @@ const Checkout = () => {
                             Total Cost: <span>{totalAmount}</span>
                           </h4>
 
-                          <button onClick={test}    className='buy__btn text-black bg-white w-100 '>Place Order</button>
+                          <button onClick={handleSubmit} className='buy__btn text-black bg-white w-100 '>Place Order</button>
                     
                      </div>
-             </Col>
+             </Col> 
               
 
        
