@@ -12,7 +12,7 @@ const Shop = () => {
 
   const [productsData,setProductsData]=useState(products)
   
-
+    console.log(products)
   
    //filtering
 

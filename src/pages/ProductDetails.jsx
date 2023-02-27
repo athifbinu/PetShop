@@ -2,7 +2,7 @@ import React,{useState,useRef,useEffect} from 'react'
 
 import { Container,Row,Col } from 'reactstrap'
 import { useParams } from 'react-router-dom'
-// import products from '../assets/data/products'
+import products from '../assets/data/products'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/CommonSection'
 import '../Style/productDetailes.css'
@@ -29,11 +29,11 @@ const ProductDetails = () => {
 
   // const product =products.find(item=>item.id === id)
   // avgRating,reviews,
-  const {imgUrl,productName,price,description,shortDesc,category} = product
+  const {imgUrl,productName,price,description,shortDesc,category} = products
   
 
-
-  const [product,setProduct] =useState({})
+   console.log(products)
+  const [Products,setProduct] =useState({})
 
   const [tab,setTab] =useState('desc')
 
@@ -98,7 +98,7 @@ const ProductDetails = () => {
    useEffect(()=>{
     window.scrollTo(0,0);
 
-   },[product])
+   },[products])
   
 
   return (

@@ -11,7 +11,7 @@ import { cartActions } from '../../redux/slices/cartSlice'
 const ProductCard = ({item}) => {
 
   const dispatch =useDispatch()
-
+     console.log("item"+item)
 
   const addToCart =() =>{
     dispatch(cartActions.addItem ({

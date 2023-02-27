@@ -104,18 +104,14 @@
 
 
 }
-.show__profileActions{
-    display: block;
-    
-}
-
-
-
 .profile__actions{
-    display: block;
-    
-    
-    
+    cursor: pointer;
+    background-color: rgb(190, 231, 231);
+    border-radius: 10px;
+    line-height: 30px;
+    width: 81px;
+    text-align: center;
+    font-weight: bold;
 }
 
 
