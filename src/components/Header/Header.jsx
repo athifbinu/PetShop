@@ -78,11 +78,9 @@ const Header = () => {
         navigate('/Cart')   //routing to cart
     }
 
-    const toggleProfileActions =()=>
-    profileActionref.current.classList.
-    toggle('show__profileActions')
+    const [open,seOpen]=useState(false)
 
-
+     
 
 
   return <header className='header' ref={hederRef}>
@@ -116,7 +114,7 @@ const Header = () => {
                 </ul>
                </div>
 
-               <div className="nav__icons">
+             <div className="nav__icons">
 
                 <span className='fav__icon'>
                 <Badge className='badge bg-black' >5</Badge>
@@ -126,43 +124,72 @@ const Header = () => {
 
                 <span className='cart__icon' onClick={navigateToCart}>
                 <i class="ri-shopping-bag-line"></i>
-                <span className='badge'>{totalQuantity}</span>
+                <span className='badge bg-black'>{totalQuantity}</span>
                 </span>
 
-
-                <div className='profile' >
+                  {/* userimg */}
+                <div className='profile' onClick={()=>{seOpen(!open)}} >
                   <motion.img
                    whileTap={{scale:1.1}}
                    src={currentUser?currentUser.photoURL: userIcon}
-                    alt="" onClick={toggleProfileActions}/>
-           
+                    alt=""
+                     />
                
                 </div>
+
+         
+
+
+             
+
+        
+
+
                 
                 <div className="profile__actions"
-                  ref={profileActionref}
-                  onClick={toggleProfileActions}
                   >
                     { currentUser ?(
                        <span onClick={logout}>Logout</span>
                         ): (
-                       <div className='d-flex align-items-center  flex-column'>
-                             <Link to='/Signup'>Signup</Link>
-                             <Link to='/login'>login</Link>
-                             <Link to='/dashboard'>Dashboard</Link>
-                        </div>
+
+                    
+                    <></>
+                    
+
                     )}
                 </div>
 
+
+         
                 
               </div>
+
+    
+
+ 
                    
                 <div className="mobile__menu">
                 <span onClick={menuToggle}>
                   <i class="ri-menu-line"></i>
                 </span>
-               </div>
+                 </div>
+                 
+
+        
+                  
+            </div>
+
+            <div className={`drop-down ${open? 'active':'inaactive'}`}>
+                    
+                    <ul>
+                    <Link to='/login'>login</Link>
+                    <Link to='/Signup'>Signup</Link>
+                    <Link to='/dashboard'>Dashboard</Link>
+                    </ul>
+                
              </div>
+
+                
           </Row>
        </Container>
   </header>
@@ -170,4 +197,8 @@ const Header = () => {
 
 export default Header
 
+
+{/* <Link to='/Signup'>Signup</Link>
+<Link to='/login'>login</Link>
+ <Link to='/dashboard'>Dashboard</Link> */}
 

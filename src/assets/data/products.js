@@ -173,10 +173,10 @@ const products =[
 
   {
     id: "05",
-    productName: "N & D Dog Food",
+    productName: "Meo tuna cat",
     imgUrl: productImg05,
     category: "brand",
-    price: 253,
+    price: 450,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -197,10 +197,10 @@ const products =[
 
   {
     id: "06",
-    productName: "N & D Dog Food",
+    productName: "N & D Cat Food",
     imgUrl: productImg06,
     category: "brand",
-    price: 253,
+    price: 800,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -221,10 +221,10 @@ const products =[
 
   {
     id: "07",
-    productName: "N & D Dog Food",
+    productName: "Chappi Dog",
     imgUrl: productImg07,
     category: "brand",
-    price: 253,
+    price: 400,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -239,15 +239,15 @@ const products =[
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.7,
+    avgRating: 4.5,
   },
 
   {
     id: "08",
-    productName: "N & D Dog Food",
+    productName: "Meetup",
     imgUrl: productImg08,
     category: "brand",
-    price: 253,
+    price: 900,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -291,10 +291,10 @@ const products =[
 
   {
     id: "10",
-    productName: "N & D Dog Food",
+    productName: "Rc Puppy",
     imgUrl: productImg10,
     category: "Dog",
-    price: 253,
+    price: 800,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -314,10 +314,10 @@ const products =[
 
   {
     id: "11",
-    productName: "N & D Dog Food",
+    productName: "Gravy",
     imgUrl: productImg11,
     category: "Dog",
-    price: 253,
+    price: 160,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -337,10 +337,10 @@ const products =[
 
   {
     id: "12",
-    productName: "N & D Dog Food",
+    productName: "puppy dog food",
     imgUrl: productImg12,
     category: "Dog",
-    price: 253,
+    price: 290,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -360,10 +360,10 @@ const products =[
 
   {
     id: "13",
-    productName: "N & D Dog Food",
+    productName: "Drols Gravy",
     imgUrl: productImg13,
     category: "Dog",
-    price: 253,
+    price: 35,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -383,7 +383,7 @@ const products =[
   
   {
     id: "14",
-    productName: "N & D Dog Food",
+    productName: "Rc Max",
     imgUrl: productImg14,
     category: "Dog",
     price: 253,
@@ -406,10 +406,10 @@ const products =[
 
   {
     id: "15",
-    productName: "N & D Dog Food",
+    productName: "Milk Bone",
     imgUrl: productImg15,
     category: "Dog",
-    price: 253,
+    price: 130,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -429,10 +429,10 @@ const products =[
 
   {
     id: "16",
-    productName: "N & D Dog Food",
+    productName: "Rc",
     imgUrl: productImg16,
     category: "Dog",
-    price: 253,
+    price: 700,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -475,10 +475,10 @@ const products =[
 
   {
     id: "18",
-    productName: "N & D Dog Food",
+    productName: "Pro",
     imgUrl: productImg18,
     category: "Dog",
-    price: 253,
+    price: 500,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -499,10 +499,10 @@ const products =[
 
   {
     id: "19",
-    productName: "N & D Dog Food",
+    productName: "Enery",
     imgUrl: productImg19,
     category: "Dog",
-    price: 253,
+    price: 900,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -523,10 +523,10 @@ const products =[
   
   {
     id: "20",
-    productName: "N & D Dog Food",
+    productName: "Rc maxi",
     imgUrl: productImg20,
     category: "Dog",
-    price: 253,
+    price: 560,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -547,10 +547,10 @@ const products =[
 
   {
     id: "21",
-    productName: "N & D Dog Food",
+    productName: "Whiskas",
     imgUrl: productImg21,
     category: "Cat",
-    price: 253,
+    price: 420,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -570,10 +570,10 @@ const products =[
 
   {
     id: "22",
-    productName: "N & D Dog Food",
+    productName: "Meo",
     imgUrl: productImg22,
     category: "Cat",
-    price: 253,
+    price: 300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -593,10 +593,10 @@ const products =[
 
   {
     id: "23",
-    productName: "N & D Dog Food",
+    productName: "sheba",
     imgUrl: productImg23,
     category: "Cat",
-    price: 253,
+    price: 100,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -616,10 +616,10 @@ const products =[
 
   {
     id: "24",
-    productName: "N & D Dog Food",
+    productName: "Temtation",
     imgUrl: productImg24,
     category: "Cat",
-    price: 253,
+    price: 300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -640,10 +640,10 @@ const products =[
 
   {
     id: "25",
-    productName: "N & D Dog Food",
+    productName: "Drols",
     imgUrl: productImg25,
     category: "Cat",
-    price: 253,
+    price: 300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -664,10 +664,10 @@ const products =[
 
   {
     id: "26",
-    productName: "N & D Dog Food",
+    productName: "meo sea food",
     imgUrl: productImg26,
     category: "Cat",
-    price: 253,
+    price: 456,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -687,10 +687,10 @@ const products =[
 
   {
     id: "27",
-    productName: "N & D Dog Food",
+    productName: "Meo Gravy",
     imgUrl: productImg27,
     category: "Cat",
-    price: 253,
+    price: 45,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -711,10 +711,10 @@ const products =[
 
   {
     id: "28",
-    productName: "N & D Dog Food",
+    productName: "Sip up",
     imgUrl: productImg28,
     category: "Cat",
-    price: 253,
+    price: 100,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -735,10 +735,10 @@ const products =[
 
   {
     id: "29",
-    productName: "N & D Dog Food",
+    productName: "meo kiien",
     imgUrl: productImg29,
     category: "Cat",
-    price: 253,
+    price: 450,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -781,10 +781,10 @@ const products =[
 
   {
     id: "30",
-    productName: "N & D Dog Food",
+    productName: "sipup",
     imgUrl: productImg30,
     category: "Cat",
-    price: 253,
+    price: 98,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -805,10 +805,10 @@ const products =[
 
   {
     id: "31",
-    productName: "N & D Dog Food",
+    productName: "whiskas kiien",
     imgUrl: productImg31,
     category: "Cat",
-    price: 253,
+    price: 450,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -876,7 +876,7 @@ const products =[
 
   {
     id: "34",
-    productName: "N & D Dog Food",
+    productName: "Toy three",
     imgUrl: productImg34,
     category: "Toys",
     price: 253,
@@ -900,10 +900,10 @@ const products =[
 
   {
     id: "35",
-    productName: "N & D Dog Food",
+    productName: "Toy Foour",
     imgUrl: productImg35,
     category: "Toys",
-    price: 253,
+    price: 58,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -923,10 +923,10 @@ const products =[
 
   {
     id: "36",
-    productName: "N & D Dog Food",
+    productName: "Bowl One",
     imgUrl: productImg36,
     category: "Bowl",
-    price: 253,
+    price: 300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -946,10 +946,10 @@ const products =[
 
   {
     id: "37",
-    productName: "N & D Dog Food",
+    productName: "Bowl Two",
     imgUrl: productImg37,
     category: "Bowl",
-    price: 253,
+    price: 300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -969,10 +969,10 @@ const products =[
 
   {
     id: "38",
-    productName: "N & D Dog Food",
+    productName: "Bowl three",
     imgUrl: productImg38,
     category: "Bowl",
-    price: 253,
+    price: 150,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -992,10 +992,10 @@ const products =[
 
   {
     id: "39",
-    productName: "N & D Dog Food",
+    productName: "Bowl Five",
     imgUrl: productImg39,
     category: "Bowl",
-    price: 253,
+    price: 450,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1015,10 +1015,10 @@ const products =[
 
   {
     id: "40",
-    productName: "N & D Dog Food",
+    productName: "Erina puppy",
     imgUrl: productImg40,
     category: "med",
-    price: 253,
+    price: 300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1038,10 +1038,10 @@ const products =[
 
   {
     id: "41",
-    productName: "N & D Dog Food",
+    productName: "skin coat",
     imgUrl: productImg41,
     category: "med",
-    price: 253,
+    price: 120,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1061,10 +1061,10 @@ const products =[
 
   {
     id: "42",
-    productName: "N & D Dog Food",
+    productName: "Hemobeast",
     imgUrl: productImg42,
     category: "med",
-    price: 253,
+    price: 180,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1084,10 +1084,10 @@ const products =[
 
   {
     id: "43",
-    productName: "N & D Dog Food",
+    productName: "Nutrich",
     imgUrl: productImg43,
     category: "med",
-    price: 253,
+    price: 2300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1108,10 +1108,10 @@ const products =[
 
   {
     id: "44",
-    productName: "N & D Dog Food",
+    productName: "zipvit",
     imgUrl: productImg44,
     category: "med",
-    price: 253,
+    price: 800,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1131,7 +1131,7 @@ const products =[
 
   {
     id: "45",
-    productName: "N & D Dog Food",
+    productName: "furglow",
     imgUrl: productImg45,
     category: "med",
     price: 253,
@@ -1154,10 +1154,10 @@ const products =[
 
   {
     id: "46",
-    productName: "N & D Dog Food",
+    productName: "erina coat",
     imgUrl: productImg46,
     category: "med",
-    price: 253,
+    price: 290,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -1177,10 +1177,10 @@ const products =[
 
   {
     id: "47",
-    productName: "N & D Dog Food",
+    productName: "petup pro",
     imgUrl: productImg47,
     category: "med",
-    price: 253,
+    price: 180,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:

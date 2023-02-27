@@ -12,6 +12,7 @@ const Shop = () => {
 
   const [productsData,setProductsData]=useState(products)
   
+
   
    //filtering
 
@@ -36,9 +37,9 @@ const Shop = () => {
     }
 
       // toys
-    if(filterValue === "Toy") {
+    if(filterValue === "Toys") {
       const filteredProducts =products.filter(
-        (item) =>item.category === "Toy"
+        (item) =>item.category === "Toys"
       );
 
       setProductsData(filteredProducts)

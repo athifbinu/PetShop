@@ -11,7 +11,7 @@ import products from '../assets/data/products'
 
 import Service from '../services/Service'
 import ProductList from '../components/UI/ProductList'
-import counterimg from '../assets/images/counter-timer-img.png'
+import counterimg from '../assets/images/bowl/pet.png'
 import Clock from "../components/UI/Clock"
 
 import useGetDate from '../costum-hooks/useGetDate'
@@ -171,14 +171,14 @@ const Home = () => {
                     <Row>
                        <Col lg='6' md='6' >
                         <div className="clock__top-content">
-                          <h4 className='text-white fs-6 mb-2'>Limitted Offers</h4>
-                          <h3 className='text-white fs-5 md-3'>qyuality Ardmssdkfh</h3>
+                          <h4 className='text-white fs-6 mb-2'>Limitted Shop</h4>
+                          <h3 className='text-white fs-5 md-3'>Visit Our Shop</h3>
                         </div>
                              <Clock/>
 
-                            <motion.button whileTap={{scale:1.2}} className='buy__btn store_btn'>
+                            <button className='cl-btn'>
                               <Link to="/shop">Visit Store</Link>
-                              </motion.button>
+                              </button>
                        </Col>
                     
                        <Col lg='6' md='6' className='text-end' >
@@ -248,6 +248,7 @@ const Home = () => {
 }
 
 export default Home
+
 
 
 

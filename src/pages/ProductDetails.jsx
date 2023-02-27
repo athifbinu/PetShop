@@ -17,6 +17,7 @@ import {doc,getDoc} from "firebase/firestore"
 import useGetDate from '../costum-hooks/useGetDate'
 
 
+
 const ProductDetails = () => {
    
   const {id}=useParams()
