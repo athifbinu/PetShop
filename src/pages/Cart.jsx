@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
-
-   const cartItems =useSelector((state)=>state.cart.cartItems)
+   
+   const cartItems =useSelector(state=>state.cart.cartItems)  //err
 
 
    //totel amount
@@ -36,7 +36,7 @@ const Cart = () => {
 
                        {
 
-                         cartItems.length===0 ?
+                         cartItems.length==0 ?
                           <h2 className='fs-4 text-center'>No Item added To the Cart</h2> : 
 
                           <table className='table bordered'>
@@ -90,6 +90,10 @@ const Cart = () => {
   )
 }
 
+
+
+  //delete item 
+  
 const Tr = ({item})=>{
 
     const dispatch=useDispatch()
@@ -110,7 +114,9 @@ const Tr = ({item})=>{
      <td>{item.price}</td>
      <td>{item.quantity}</td>
      <td>
-       <motion.i whileTap={{scale:1.2}} onClick={deleteProduct} className='ri-delete-bin-line'></motion.i>
+       <motion.i whileTap={{scale:1.2}}
+        onClick={deleteProduct}
+       className='ri-delete-bin-line'></motion.i>
      </td>
    </tr>
 

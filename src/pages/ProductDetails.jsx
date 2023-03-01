@@ -12,49 +12,38 @@ import { useDispatch } from 'react-redux'
 import { cartActions } from '../redux/slices/cartSlice'
 import {toast} from 'react-toastify';
 
-import { db } from '../FireBase/Firebase.config'
-import {doc,getDoc} from "firebase/firestore"
-import useGetDate from '../costum-hooks/useGetDate'
+
 
 
 
 const ProductDetails = () => {
    
   const {id}=useParams()
+ 
 
-    
-  const docRef =doc(db,'products',id)
-    
-  const {data:products}=useGetDate('products')
+
+  const product =products.find(item=>item.id === id)
+
   
 
 
-  // const product =products.find(item=>item.id === id)
   // avgRating,reviews,
-  const {imgUrl,productName,price,description,shortDesc,category} = products
+  const {imgUrl,
+    productName,
+    avgRating,
+    // reviews,
+    price,
+    description,
+    shortDesc,
+    category} = product
   
-
-   console.log("products"+ products)
-  const [Products,setProduct] =useState({})
 
   const [tab,setTab] =useState('desc')
 
   const [rating,setRating]=useState(null)
 
 
-   useEffect(()=>{
-     const getProduct =async()=>{
-       const docSnap =await getDoc(docRef)
-
-       if(docSnap.exists()){
-         setProduct(docSnap.data())
-       }else {
-         console.log("no product")
-       }
-     }
-
-     getProduct()
-   },[])
+  
 
 
    //related Products
@@ -71,11 +60,12 @@ const ProductDetails = () => {
 
        const reviewUserName =reviewUser.current.value;
        const reviewuserMeg =reviewmsg.current.value;
-
+       
+        //review object
         const reviewObj ={
            userName:reviewUserName,
            text:reviewuserMeg,
-            rating,
+           rating,
 
         }
       
@@ -89,7 +79,7 @@ const ProductDetails = () => {
    const addToCart =()=>{
     dispatch(cartActions.addItem({
       id,
-      image:imgUrl,
+      imgUrl,
       productName,
       price,
     
@@ -126,7 +116,7 @@ const ProductDetails = () => {
                             <span  ><i class="ri-star-s-fill"></i></span>
                             <span  ><i class="ri-star-half-s-line"></i></span>
                            </div>
-                           {/* <p>(<span>{avgRating}</span> rating)</p> */}
+                           <p>(<span>{avgRating}</span> rating)</p>
                     </div>
                    
                      <div className='d-flex align-items-center gap-5' >
@@ -153,7 +143,8 @@ const ProductDetails = () => {
                <div className="tab__wrapper d-flex align-items-center gap-5">
                 <h6 className={`${tab==='desc' ? 'active__tab' : "  "}`}onClick={()=>setTab('desc')} >Description</h6>
                 <h6 className={`${tab==='rev' ? 'active__tab' : "  "}`} onClick={()=>setTab('rev')}>Reviews </h6>
-                {/* ({reviews.length}) */}
+                {/* totel revirews length */}
+              {/* Reviews ({reviews.length}) */} 
                </div>
 
                {
@@ -162,18 +153,19 @@ const ProductDetails = () => {
                         </div> 
                         : <div className='product__review'>
                           <div className="review__wrapper">
-                            {/* <ul>
+                            
+                            <ul>
                               {
-                                reviews?.map((item,index)=>(
+                                reviewObj.map((text,rating,user)=>(
                                   <li kew={index} className="mb-4 mt-4">
-                                     <h6>Athif Binu</h6>
+                                        
                                     <span>{item.rating} ( rating)</span>
                                       <p>{item.text}</p>
                                   </li>
                                   
                                 ))
                               }
-                            </ul> */}
+                            </ul>
                              
                              <div className="review__from">
                                <h4>Share Your Expirence</h4>

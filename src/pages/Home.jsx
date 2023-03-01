@@ -93,9 +93,9 @@ const Home = () => {
                  <div className="hero__content">
                        <p className="hero__subtittle">
                          Trending Producs in {year} </p>
-                      <h2>Lorem ipsum dolor sit amet conse</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                          Consectetur porro obcaecati qua</p>
+                      <h2>Mtm Vetinary Medicels <br /> & PetShop</h2>
+                    <p>The Heaven of your Pets</p>
+                  
 
                           
                             
