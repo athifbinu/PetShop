@@ -1,3 +1,4 @@
+
 import React,{useState,useRef,useEffect} from 'react'
 
 import { Container,Row,Col } from 'reactstrap'
@@ -31,7 +32,7 @@ const ProductDetails = () => {
   const {imgUrl,
     productName,
     avgRating,
-    // reviews,
+    reviews,
     price,
     description,
     shortDesc,
@@ -144,28 +145,35 @@ const ProductDetails = () => {
                 <h6 className={`${tab==='desc' ? 'active__tab' : "  "}`}onClick={()=>setTab('desc')} >Description</h6>
                 <h6 className={`${tab==='rev' ? 'active__tab' : "  "}`} onClick={()=>setTab('rev')}>Reviews </h6>
                 {/* totel revirews length */}
-              {/* Reviews ({reviews.length}) */} 
+              Reviews ({reviews.length}) 
                </div>
 
                {
-                tab==='desc' ? <div className="tab__content mt-5">
+                tab==='desc' ? (
+                 <div className="tab__content mt-5">
                        <p>{description}</p>
                         </div> 
-                        : <div className='product__review'>
+                ):( 
+                        <div className='product__review'>
                           <div className="review__wrapper">
                             
-                            <ul>
-                              {
-                                reviewObj.map((text,rating,user)=>(
-                                  <li kew={index} className="mb-4 mt-4">
-                                        
-                                    <span>{item.rating} ( rating)</span>
-                                      <p>{item.text}</p>
-                                  </li>
-                                  
-                                ))
+                             <ul>
+                              {/* {
+                                
+                               reviewObj?.map((item,index)=>(
+                                 <li><span>{item.rating}</span>
+                                  <p>{item.text}</p>
+                                 </li>
+                               ))
+                              } */
+
+                              <li>
+                                <span>5</span>
+                                <span>hello</span>
+                              </li>
+                              
                               }
-                            </ul>
+                            </ul> 
                              
                              <div className="review__from">
                                <h4>Share Your Expirence</h4>
@@ -205,7 +213,7 @@ const ProductDetails = () => {
                              </div>
                           </div>
                         </div>
-               }
+               )}
 
           </Col>
 
