@@ -47,6 +47,7 @@ const cartSlice = createSlice({
 
 
 
+
                    //cart product delete funtion
      deleteItem:(state,action)=>{
         const id =action.payload
@@ -55,13 +56,13 @@ const cartSlice = createSlice({
         if(existingItem){
             state.cartItems=state.cartItems.filter(item=>item.id===id)
              
-            state.totalQuantity=state.totalQuantity -existingItem.quantity;
+            state.totalQuantity=state.totalQuantity-existingItem.quantity;
         }
 
         state.totalAmount =state.cartItems.reduce(
             (totel,item)=>totel +Number(item.price) * Number(item.
            
-                quantity),0   
+                quantity),0 
           )       
     },
 
