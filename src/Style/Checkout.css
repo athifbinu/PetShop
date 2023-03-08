@@ -10,6 +10,9 @@
     background: var(--primary-color);
     color: #fff;
     border-radius: 5px;
+    width: 362px;
+    margin-left: 752px;
+    margin-top: -360px;
 }
 
 .checkout__cart h6,

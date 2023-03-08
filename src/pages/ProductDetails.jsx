@@ -39,9 +39,9 @@ const ProductDetails = () => {
     category} = product
   
 
-  const [tab,setTab] =useState('desc')
 
-  const [rating,setRating]=useState(null)
+
+  
 
 
   
@@ -50,30 +50,31 @@ const ProductDetails = () => {
    //related Products
   const relatedProducts = products.filter(item=>item.category===category)
   
-    const reviewUser =useRef("")
-    const reviewmsg =useRef("")
+
+  //review
+   
+  const [tab,setTab] =useState('desc')
+  const [revName,setRevName]=useState("")
+  const [revMsg,setRevMsg]=useState("")
 
 
   const submitHandler =(e)=>{
     
        e.preventDefault();
-
-
-       const reviewUserName =reviewUser.current.value;
-       const reviewuserMeg =reviewmsg.current.value;
        
-        //review object
-        const reviewObj ={
-           userName:reviewUserName,
-           text:reviewuserMeg,
-           rating,
+        const reviewObj={
+           name:revName,
+           Msg:revMsg
 
         }
-      
-         console.log(reviewObj)
+
+        console.log(reviewObj)
          toast.success("Review Submited")           //rating succes alerts
 
   }
+
+
+
 
   const dispatch =useDispatch()
 
@@ -93,6 +94,7 @@ const ProductDetails = () => {
 
    },[products])
   
+    
 
   return (
     <Helmet title={productName}>
@@ -156,19 +158,17 @@ const ProductDetails = () => {
                 ):( 
                         <div className='product__review'>
                           <div className="review__wrapper">
-                            
-                             {/* <ul>
-                              {
-                                 
-                                
-                               reviewObj?.map((item,index)=>(
-                                 <li><span>{item.rating}</span>
-                                  <p>{item.text}</p>
-                                 </li>
-                               ))
-                              
-                              }
-                            </ul>  */}
+{/*                             
+                           {
+                              reviewObj.map((item)=>{
+                                 return (
+                                    <div className="review__item">
+                                         <li>{item.name}</li>
+                                          <li>{item.Msg}</li>
+                                    </div>
+                                 )
+                              })
+                           } */}
                              
                              <div className="review__from">
                                <h4>Share Your Expirence</h4>
@@ -176,7 +176,8 @@ const ProductDetails = () => {
                                           <div className="from__group">
                                               <input type="text"
                                                placeholder='Enter Name' 
-                                                ref={reviewUser}
+                                                  value={revName}
+                                                  onChange={e=>setRevName(e.target.value)}
                                                 required
                                                  />
                                               
@@ -184,22 +185,22 @@ const ProductDetails = () => {
 
 
                                           <div className="from__group d-flex align-items-center gap-4 rating__group">
-                                              <motion.span whileTap={{scale:1.3}} onClick={()=>setRating(1)}>1<i className='ri-star-s-fill'></i></motion.span>
+                                              {/* <motion.span whileTap={{scale:1.3}} onClick={()=>setRating(1)}>1<i className='ri-star-s-fill'></i></motion.span>
                                               <motion.span whileTap={{scale:1.3}} onClick={()=>setRating(2)} >2<i className='ri-star-s-fill'></i></motion.span>
                                               <motion.span whileTap={{scale:1.3}}  onClick={()=>setRating(3)}>3<i className='ri-star-s-fill'></i></motion.span>
                                               <motion.span whileTap={{scale:1.3}}  onClick={()=>setRating(4)}>4<i className='ri-star-s-fill'></i></motion.span>
-                                              <motion.span whileTap={{scale:1.3}}   onClick={()=>setRating(5)}>5<i className='ri-star-s-fill'></i></motion.span>
+                                              <motion.span whileTap={{scale:1.3}}   onClick={()=>setRating(5)}>5<i className='ri-star-s-fill'></i></motion.span> */}
 
                                           </div>
 
                                           <div className="from__group">
                                               <textarea 
-                                                ref={reviewmsg} //msg
                                                rows={4} 
                                               type="text" 
                                               placeholder='Review Message'
+                                              value={revMsg}
+                                              onChange={e=>setRevMsg(e.target.value)}
                                               required
-                                              
                                               />
                                           </div>
 

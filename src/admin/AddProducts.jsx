@@ -89,7 +89,7 @@ const AddProducts = () => {
                 <FormGroup className='form__group'>
                     <span>Product Title</span>
                     <br />
-                    <input type="text" className='wl' placeholder='Pedigree'
+                    <input type="text" className='wl' placeholder='Enter Product Name'
                      value={enterTitle}
                      onChange={e=>setEnterTitle(e.target.value)}
                       required />

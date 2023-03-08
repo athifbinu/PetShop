@@ -10,6 +10,7 @@ const ProductList = ({data}) => {
      {
         data?.map((item,index)=>(
             <ProductCard item={item} key={index}/>
+            
         ))
 
      }
@@ -19,3 +20,5 @@ const ProductList = ({data}) => {
 }
 
 export default ProductList
+
+
