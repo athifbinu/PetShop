@@ -10,6 +10,7 @@ import { Container,Row,Col } from 'reactstrap'
 const Shop = () => { 
     
 
+  
   const [productsData,setProductsData]=useState(products)
   
     console.log(products)
@@ -126,6 +127,7 @@ const Shop = () => {
                     </span>
                  </div>
               </Col>
+              
               
           </Row>
         </Container>

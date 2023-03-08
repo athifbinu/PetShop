@@ -144,8 +144,8 @@ const ProductDetails = () => {
                <div className="tab__wrapper d-flex align-items-center gap-5">
                 <h6 className={`${tab==='desc' ? 'active__tab' : "  "}`}onClick={()=>setTab('desc')} >Description</h6>
                 <h6 className={`${tab==='rev' ? 'active__tab' : "  "}`} onClick={()=>setTab('rev')}>Reviews </h6>
-                {/* totel revirews length */}
-              Reviews ({reviews.length}) 
+          
+              {/* Reviews ({reviews.length})  */}
                </div>
 
                {
@@ -157,23 +157,18 @@ const ProductDetails = () => {
                         <div className='product__review'>
                           <div className="review__wrapper">
                             
-                             <ul>
-                              {/* {
+                             {/* <ul>
+                              {
+                                 
                                 
                                reviewObj?.map((item,index)=>(
                                  <li><span>{item.rating}</span>
                                   <p>{item.text}</p>
                                  </li>
                                ))
-                              } */
-
-                              <li>
-                                <span>5</span>
-                                <span>hello</span>
-                              </li>
                               
                               }
-                            </ul> 
+                            </ul>  */}
                              
                              <div className="review__from">
                                <h4>Share Your Expirence</h4>

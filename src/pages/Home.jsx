@@ -10,7 +10,7 @@ import {motion} from 'framer-motion'
 import products from '../assets/data/products'
 
 import Service from '../services/Service'
-import ProductList from '../components/UI/ProductList'
+import ProductListOne from '../components/UI/ProductListOne'
 import counterimg from '../assets/images/bowl/pet.png'
 import Clock from "../components/UI/Clock"
 
@@ -124,7 +124,7 @@ const Home = () => {
                        </Col>
                        {
                         loading ? <h5 className='fw-bold'>Loading...</h5> :
-                        <ProductList data={TopbrandsProducts}/>
+                        <ProductListOne data={TopbrandsProducts}/>
                        }
              
                     
@@ -142,7 +142,7 @@ const Home = () => {
                       </Col>
                         {
                           loading ? <h5 className='fw-bold'>Loading</h5> :
-                          <ProductList data={DogFoods}/>   
+                          <ProductListOne data={DogFoods}/>   
                         }
                   </Row>
               </Container>
@@ -159,7 +159,7 @@ const Home = () => {
                       </Col>
                         {
                           loading ? <h5 className='fw-bold'>Loading</h5> :
-                          <ProductList data={catFoods}/>
+                          <ProductListOne data={catFoods}/>
                         }   
                   </Row>
               </Container>
@@ -187,7 +187,7 @@ const Home = () => {
                        </Row>
                    </Container>
                </section>
-
+                
                <section className='new__arrivals'>
                    <Container>
                       <Row>
@@ -196,7 +196,7 @@ const Home = () => {
                           </Col>
                           {
                             loading ? <h5 className='fw-bold'>Loading</h5> :
-                             <ProductList data={Toys}/>
+                             <ProductListOne data={Toys}/>
                           }
 
                       </Row>
@@ -215,7 +215,7 @@ const Home = () => {
 
                           {
                             loading ? <h5 className='fw-bold'>Loading</h5>:
-                            <ProductList data={Bowl}/>
+                            <ProductListOne data={Bowl}/>
                           }
 
 
@@ -234,10 +234,10 @@ const Home = () => {
                             loading ? <h5 className='fw-bold'>Loading</h5> :
 
 
-                           <ProductList data={medicines} />
+                           <ProductListOne data={medicines} />
                           }
 
-                         <ProductList />
+                         <ProductListOne />
 
 
                       </Row>
