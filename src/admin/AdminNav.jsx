@@ -1,10 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Container,Row } from 'reactstrap'
 
 import useAuth  from '../costum-hooks/useAuth'
 import "../admin-style/admin.nav.css"
 
 import { NavLink } from 'react-router-dom'
+
+import { Link } from 'react-router-dom'
 
 const admin__nav =[
   {
@@ -36,6 +38,10 @@ const AdminNav = () => {
   const {currentUser} =useAuth()
 
 
+   
+
+   const [Open,SetOpen]=useState(false)
+
   return (
     <>
 
@@ -45,9 +51,9 @@ const AdminNav = () => {
          <div className="admin__nav-top">
               <Container>
                    <div className='admin__nav-wrapper-top'>
-                      <div className="logo">
+                      <Link to="/home" className="logo">
                           <h2>Mtm Petshop</h2>
-                      </div>
+                      </Link>
 
                        <div className="search__box ">
                              <input className='wl' type="text" placeholder='Search....' />
@@ -55,12 +61,25 @@ const AdminNav = () => {
                                 <i className='ri-search-line ml '></i>
                               </span>
                        </div>
+
+                       {/* user img */}
                        <div className="admin__nav-top-right">
                          <span><i className='ri-notification-3-line'></i></span>
                          <span><i className='ri-settings-2-line'></i></span>
-                         <img src={currentUser && currentUser.photoURL} alt="" />
+                         <img onClick={()=>{SetOpen(!Open)}} src={currentUser && currentUser.photoURL} alt="" />
                        </div>
                    </div>
+
+
+                   <div className={`drop-down ad-dr ${Open? 'active':'inaactive'}`}>
+                    
+                    <ul>
+                    <Link to='/login'>login</Link>
+                    <Link to='/Signup'>Signup</Link>
+                    <Link to='/home'>Home</Link>
+                    </ul>
+                
+                    </div>
               </Container>
          </div>
     </header>

@@ -122,7 +122,7 @@ const AddProducts = () => {
                 </FormGroup>
 
 
-                <FormGroup className='form__group w-50 '>
+                <FormGroup className='form__group w-50 pr'>
                     <span>Category</span>
                     <br />
                     <select className='w-100 p-2'

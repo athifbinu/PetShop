@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
 .ml{
     margin-left: -30px;
 }
@@ -12,11 +18,29 @@
     
 }
 .cl-btn{
-   background-color: antiquewhite;
-   margin-top: 30px;
-   border-radius: 10px;
-   font-weight: bold;
+  display: inline-block;
+  padding: 7px 3px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 37px;
 }
+.cl-btn:hover{
+  background-color: #f39c12;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+
 .drop-down{
   
   
@@ -54,5 +78,12 @@
 .Ml{
   margin-left: 10px;
 }
+.pr{
+  padding-right: 170px;
+}
 
+.ad-dr{
+  margin-left: 89px;
+  margin-top: -1px;
+}
 

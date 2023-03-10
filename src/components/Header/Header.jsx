@@ -90,9 +90,9 @@ const Header = () => {
 
                <div className="logo">
                 <img src={logo} alt="logo" />
-                <div>
+                <Link to='/home'>
                   <h1>Mtm Petshop</h1>
-                </div>
+                </Link>
                </div>
 
 
@@ -198,7 +198,5 @@ const Header = () => {
 export default Header
 
 
-{/* <Link to='/Signup'>Signup</Link>
-<Link to='/login'>login</Link>
- <Link to='/dashboard'>Dashboard</Link> */}
+
 

@@ -32,7 +32,6 @@ const ProductDetails = () => {
   const {imgUrl,
     productName,
     avgRating,
-    reviews,
     price,
     description,
     shortDesc,
@@ -56,6 +55,7 @@ const ProductDetails = () => {
   const [tab,setTab] =useState('desc')
   const [revName,setRevName]=useState("")
   const [revMsg,setRevMsg]=useState("")
+  const [ratting,setRating]=useState("")
 
 
   const submitHandler =(e)=>{
@@ -64,7 +64,8 @@ const ProductDetails = () => {
        
         const reviewObj={
            name:revName,
-           Msg:revMsg
+           Msg:revMsg,
+           ratting:ratting
 
         }
 
@@ -157,18 +158,13 @@ const ProductDetails = () => {
                         </div> 
                 ):( 
                         <div className='product__review'>
-                          <div className="review__wrapper">
-{/*                             
-                           {
-                              reviewObj.map((item)=>{
-                                 return (
-                                    <div className="review__item">
-                                         <li>{item.name}</li>
-                                          <li>{item.Msg}</li>
-                                    </div>
-                                 )
-                              })
-                           } */}
+                          <div className="review__wrapper">    
+
+
+                             {
+                              //review
+                             }
+
                              
                              <div className="review__from">
                                <h4>Share Your Expirence</h4>
@@ -185,11 +181,11 @@ const ProductDetails = () => {
 
 
                                           <div className="from__group d-flex align-items-center gap-4 rating__group">
-                                              {/* <motion.span whileTap={{scale:1.3}} onClick={()=>setRating(1)}>1<i className='ri-star-s-fill'></i></motion.span>
+                                              <motion.span whileTap={{scale:1.3}} onClick={()=>setRating(1)}>1<i className='ri-star-s-fill'></i></motion.span>
                                               <motion.span whileTap={{scale:1.3}} onClick={()=>setRating(2)} >2<i className='ri-star-s-fill'></i></motion.span>
                                               <motion.span whileTap={{scale:1.3}}  onClick={()=>setRating(3)}>3<i className='ri-star-s-fill'></i></motion.span>
                                               <motion.span whileTap={{scale:1.3}}  onClick={()=>setRating(4)}>4<i className='ri-star-s-fill'></i></motion.span>
-                                              <motion.span whileTap={{scale:1.3}}   onClick={()=>setRating(5)}>5<i className='ri-star-s-fill'></i></motion.span> */}
+                                              <motion.span whileTap={{scale:1.3}}   onClick={()=>setRating(5)}>5<i className='ri-star-s-fill'></i></motion.span>
 
                                           </div>
 

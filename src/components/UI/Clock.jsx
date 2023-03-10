@@ -11,7 +11,7 @@ const Clock = () => {
   let intervel;
 
   const countDown = ()=>{
-    const destination =new Date('mar 1,2023').getTime()
+    const destination =new Date('may 1,2023').getTime()
     intervel = setInterval(()=>{
 
       const now =new Date().getTime()
